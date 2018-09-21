@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-const Header = ({ text }) => {
+const Header = ({ brand }) => {
   return (
     <nav className="header">
       <span className="header-hamburger">
       <i className="material-icons">menu</i>
       </span>
       <a href="/" className="header-logo">
-        {text}
+        {brand}
       </a>
       <ul className="header-nav">
         <li>
@@ -22,11 +22,11 @@ const Header = ({ text }) => {
 };
 
 Header.defaultProps = {
-  text: "Moja aplikacja"
+  brand: "Moja aplikacja"
 };
 
 Header.propTypes = {
-  text: PropTypes.string.isRequired
+  brand: PropTypes.string.isRequired
 };
 
 export default Header;
