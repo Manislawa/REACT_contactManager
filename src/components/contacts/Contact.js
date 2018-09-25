@@ -34,8 +34,8 @@ export default class Contact extends Component {
               </h3>
               {showContactDetails ? (
                 <ul className="contact-data">
-                  <li className="contact-data-item">email: {email}</li>
-                  <li className="contact-data-item">telefon: {phone}</li>
+                email:<li className="contact-data-item"> {email}</li>
+                telefon: <li className="contact-data-item"> {phone}</li>
                 </ul>
               ) : null}
             </div>

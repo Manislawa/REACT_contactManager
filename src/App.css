@@ -67,84 +67,81 @@ a {
 
 /* reules for desktops */
 @media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
 
-     .header {
-       display: flex;
-       justify-content: space-between;
-       padding-bottom: 0;
-       height: 70px;
-       align-items: center;
-     }
+  .header-nav {
+    display: flex !important;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 
-     .header-nav {
-       display: flex !important;
-       margin-right: 30px;
-       flex-direction: row;
-       justify-content: flex-end;
-     }
+  .header-nav li {
+    margin: 0;
+  }
 
-     .header-nav li {
-       margin: 0;
-     }
+  .header-nav-links {
+    margin-left: 40px;
+  }
 
-     .header-nav-links {
-       margin-left: 40px;
-     }
+  .header-logo {
+    margin-top: 0;
+  }
 
-     .header-logo {
-       margin-top: 0;
-     }
-
-     .header-hamburger {
-       display: none;
-     }
-   }
+  .header-hamburger {
+    display: none;
+  }
+}
 
 /* MAIN SECTION */
 
 /* ONE CONTACT */
-main{
-   padding: 1rem;
-   background-color: #2376ae;
-   color: white;
+main {
+  padding: 1rem;
+  background-color: #2376ae;
+  color: white;
 }
-.contact{
-   margin: 2.5rem auto;
-   padding: 1rem;
-   background-color: #1b5881;
-   box-shadow: 0px 0px 6px 3px #c16ecf inset;
+.contact {
+  margin: 2.5rem auto;
+  padding: 1rem;
+  background-color: #1b5881;
+  box-shadow: 0px 0px 6px 3px #c16ecf inset;
 }
-.contact-name{
-   padding-top: 1rem;
-   padding-bottom: 1rem;
-   text-align: center ;
+.contact-name {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  /* box-shadow: 0px 8px 5px -4px #c16ecf; */
 }
-.contact-name .material-icons{
+.contact-name .material-icons {
   font-size: 18px;
-  padding-left: .5rem;
+  padding-left: 0.5rem;
 }
-.contact-name .material-icons:last-child{
+.contact-name .material-icons:last-child {
   /* delete contact icon */
   padding-left: 3rem;
-
-
 }
-.contact-name .material-icons:hover{
+.contact-name .material-icons:hover {
   cursor: pointer;
 }
-.contact-data{
-   margin: 0 auto .5rem;
-   padding: 1rem;
-
+.contact-data {
+  margin: 0 auto 0.5rem;
+  padding: 1rem;
 }
-.contact-data-item{
-   margin: .5rem auto;
-   padding: 1rem;
-   box-shadow: 0 0 1px 2px #6c72bd, 2px 2px 1px 1px #3e3e4f inset;
+.contact-data-item {
+  width: 100%;
+  margin: 0.5rem auto;
+  padding: 1rem;
+  box-shadow: 0 0 1px 2px #6c72bd, 2px 2px 1px 1px #3e3e4f inset;
 }
-.contact-data-item:first-child{
-   margin-bottom: 1rem;
-
+.contact-data-item:first-child {
+  margin-bottom: 1rem;
 }
 /* LIST OF CONTACTS */
 /* .contactList{
