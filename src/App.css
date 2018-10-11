@@ -147,3 +147,16 @@ main {
 /* .contactList{
 
 } */
+
+/* FORM VALIDATION */
+.invalid-feedback-custom {
+  color: #df82f0;
+}
+.form-control-custom {
+  height: 100%;
+  border: none;
+  border-radius: 0;
+}
+.form-control-custom.is-invalid {
+  box-shadow: 0 0 1px 6px #df82f0;
+}
