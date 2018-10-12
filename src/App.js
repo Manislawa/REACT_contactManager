@@ -1,25 +1,29 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/header/Header";
+import About from "./components/pages/About";
 import ContactList from "./components/contacts/ContactList";
 import FormAddContact from "./components/form/FormAddContact";
 import { Provider } from "./context";
-
-
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-
 
 class App extends Component {
   render() {
     return (
       <Provider>
-        <div className="App">
-          <Header brand="Moje KONTAKTY" />
-          <main>
-            <FormAddContact />
-            <ContactList />
-          </main>
-        </div>
+        <Router>
+          <div className="App">
+            <Header brand="Moje KONTAKTY" />
+            <main>
+              <Switch>
+                <Route exact path="/" component={ContactList} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/contact/add" component={FormAddContact} />
+              </Switch>
+            </main>
+          </div>
+        </Router>
       </Provider>
     );
   }

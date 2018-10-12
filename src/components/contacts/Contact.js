@@ -4,7 +4,7 @@ import { Consumer } from "../../context";
 
 export default class Contact extends Component {
   state = {
-    showContactDetails: true
+    showContactDetails: false
   };
   showDetailsClick = () => {
     this.setState({ showContactDetails: !this.state.showContactDetails });

@@ -7,7 +7,13 @@ body {
   min-height: 100vh;
   font-family: "Josefin Sans", sans-serif;
 }
-
+main {
+  min-height: 100vh;
+}
+h1 {
+  text-align: center;
+  padding: 40px 0 20px;
+}
 li {
   list-style: none;
 }
@@ -51,10 +57,12 @@ a {
   list-style-type: none;
   display: none;
   flex-direction: column;
+  margin-bottom: 0;
 }
 .header-nav li {
   text-align: center;
-  margin: 15px auto;
+  padding: 0 20px;
+
 }
 .header-nav-link {
   text-decoration: none;
@@ -108,6 +116,7 @@ main {
   color: white;
 }
 .contact {
+  max-width: 450px;
   margin: 2.5rem auto;
   padding: 1rem;
   background-color: #1b5881;
@@ -151,6 +160,7 @@ main {
 /* FORM VALIDATION */
 .invalid-feedback-custom {
   color: #df82f0;
+  text-align: center;
 }
 .form-control-custom {
   height: 100%;

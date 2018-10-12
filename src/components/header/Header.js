@@ -1,20 +1,31 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = ({ brand }) => {
   return (
     <nav className="header">
       <span className="header-hamburger">
-      <i className="material-icons">menu</i>
+        <i className="material-icons">menu</i>
       </span>
       <a href="/" className="header-logo">
         {brand}
       </a>
       <ul className="header-nav">
         <li>
-          <a href="/" className="header-nav-link">
+          <Link to="/" className="header-nav-link">
             <i className="material-icons">home</i>
-          </a>
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact/add" className="header-nav-link">
+            Nowy
+          </Link>
+        </li>
+        <li>
+          <Link to="/about" className="header-nav-link">
+            Info
+          </Link>
         </li>
       </ul>
     </nav>
@@ -49,5 +60,3 @@ export default Header;
 //   }
 
 // headerHamburger.addEventListener('click',toggle());
-
-

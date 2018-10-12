@@ -49,6 +49,8 @@ export default class contactFormAdd extends Component {
       phone: "",
       errors: {}
     });
+
+    this.props.history.push('/');
   };
 
   render() {

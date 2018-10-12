@@ -31,7 +31,7 @@ const FormTextInputGroup = ({
 
 FormTextInputGroup.defaultProps = {
   type: 'text'
-}
+};
 
 FormTextInputGroup.propTypes = {
   label: PropTypes.string.isRequired,
