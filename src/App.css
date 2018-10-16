@@ -17,11 +17,14 @@ h1 {
 li {
   list-style: none;
 }
-a {
+p {
+  text-align: center;
+}
+a:hover {
   text-decoration: none;
 }
 .container {
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
 }
 /* HEADER SECTION */
@@ -52,7 +55,9 @@ a {
   font-size: 25px;
   margin-top: 10px;
   margin-left: 20px;
+  transition: .15s ease-in-out;
 }
+
 .header-nav {
   list-style-type: none;
   display: none;
@@ -62,7 +67,11 @@ a {
 .header-nav li {
   text-align: center;
   padding: 0 20px;
+  transition: .15s ease-in-out;
 
+}
+.header-nav li:hover, .header-logo:hover{
+  transform: scale(1.05);
 }
 .header-nav-link {
   text-decoration: none;
@@ -116,7 +125,7 @@ main {
   color: white;
 }
 .contact {
-  max-width: 450px;
+  max-width: 550px;
   margin: 2.5rem auto;
   padding: 1rem;
   background-color: #1b5881;
@@ -131,10 +140,19 @@ main {
 .contact-name .material-icons {
   font-size: 18px;
   padding-left: 0.5rem;
+  padding-top: .5rem;
 }
-.contact-name .material-icons:last-child {
+.contact-name .material-icons.del-icon {
   /* delete contact icon */
-  padding-left: 3rem;
+  float: right;
+  margin-right: 2rem;
+  color: #bdcfdb;
+}
+.contact-name .material-icons.edit-icon {
+  /* delete contact icon */
+  float: right;
+  margin-right: 1rem;
+  color: #bdcfdb;
 }
 .contact-name .material-icons:hover {
   cursor: pointer;
@@ -152,20 +170,29 @@ main {
 .contact-data-item:first-child {
   margin-bottom: 1rem;
 }
-/* LIST OF CONTACTS */
-/* .contactList{
 
-} */
 
-/* FORM VALIDATION */
-.invalid-feedback-custom {
-  color: #df82f0;
-  text-align: center;
-}
+/* FORM  */
 .form-control-custom {
   height: 100%;
   border: none;
   border-radius: 0;
+}
+.sub-form{
+  width: 100%;
+  margin: 1.5rem auto;
+  padding: .7rem;
+  font-weight: 600;
+  color: #492b4e;
+  background-color: #a470c9;
+  box-shadow: 2px 2px 1px 1px #2f2f3b;
+  cursor: pointer;
+border: none;
+}
+/* form validation */
+.invalid-feedback-custom {
+  color: #df82f0;
+  text-align: center;
 }
 .form-control-custom.is-invalid {
   box-shadow: 0 0 1px 6px #df82f0;

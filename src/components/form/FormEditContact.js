@@ -3,13 +3,26 @@ import { Consumer } from "../../context";
 import FormTextInputGroup from "./FormTextInputGroup";
 import axios from "axios";
 
-export default class contactFormAdd extends Component {
+export default class FormEditContact extends Component {
   state = {
     name: "",
     email: "",
     phone: "",
     errors: {}
   };
+
+  async componentDidMount() {
+    const { id } = this.props.match.params;
+    const response = await axios.get(
+      `https://jsonplaceholder.typicode.com/users/${id}`
+    );
+    const contact = response.data;
+    this.setState({
+      name: contact.name,
+      email: contact.email,
+      phone: contact.phone
+    });
+  }
 
   handleChange = e =>
     this.setState({
@@ -33,18 +46,17 @@ export default class contactFormAdd extends Component {
       return;
     }
 
-    const newContact = {
+    const updateContact = {
       name,
       email,
       phone
     };
-
-    const response = await axios.post(
-      "https://jsonplaceholder.typicode.com/users",
-      newContact
+    const { id } = this.props.match.params;
+    const response = await axios.put(
+      `https://jsonplaceholder.typicode.com/users/${id}`,
+      updateContact
     );
-
-    dispatch({ type: "ADD_CONTACT", payload: response.data });
+    dispatch({ type: "UPDATE_CONTACT", payload: response.data });
 
     // clear form after submit
     this.setState({
@@ -65,7 +77,7 @@ export default class contactFormAdd extends Component {
           const { dispatch } = value;
           return (
             <div className="contact container">
-              <h3 className="contact-name">Dodaj Kontakt</h3>
+              <h3 className="contact-name">Edytuj Kontakt</h3>
               <form
                 className="contact-data"
                 onSubmit={this.handleSubmit.bind(this, dispatch)}
@@ -98,7 +110,7 @@ export default class contactFormAdd extends Component {
                 <input
                   type="submit"
                   className="sub-form"
-                  value="Dodaj kontakt"
+                  value="Zapisz zmiany"
                 />
               </form>
             </div>
